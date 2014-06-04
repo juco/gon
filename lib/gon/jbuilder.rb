@@ -65,6 +65,7 @@ class Gon
             end
           end
         end
+        self.extend @_controller_name.capitalize + 'Helper'
         lines = find_partials File.readlines(jbuilder_path)
         source = lines.join('')
 
